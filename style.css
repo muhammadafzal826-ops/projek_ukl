@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background: linear-gradient(to bottom, #1a033d, #000000);
+    min-height: 100vh;
+    padding: 40px 20px;
+    border-right: 2px solid #5d3fd3;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.sidebar h2 span {
+    color: #a04ef6;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: rgba(93, 63, 211, 0.3);
+    color: #00f2ff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    position: relative;
+    background-image: 
+        linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0d1117;
+    margin-top: 20px;
+}
+
+table th {
+    background-color: #5d3fd3;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #333;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+.box-form {
+    background-color: #161b22;
+    padding: 20px;
+    border: 1px solid #00f2ff;
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #d1d1d1;
+    border: none;
+    border-radius: 4px;
+    color: #333;
+}
+
+button {
+    background-color: #008094;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #00f2ff;
+    color: black;
+}
+
+.character-img {
+    height: 95%;
+    position: absolute;
+    bottom: 0;
+    right: 1%;
+    z-index: 1;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.box-artikel {
+    background-color: #161b22;
+    border: 1px solid #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.box-artikel h3 {
+    color: #00f2ff;
+    margin-bottom: 10px;
+}
+
+.box-artikel p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.box-artikel .tgl {
+    color: #5d3fd3;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.logout, .logout-btn {
+    color: #ff4e4e !important;
+    margin-top: auto;
+}
+
+
+
+.table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.program-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #111; 
+    color: white;
+    font-family: sans-serif;
+}
+
+.program-table thead tr {
+    background-color: #5d3fd3;
+    text-align: left;
+}
+
+.program-table th {
+    padding: 12px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.program-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #333;
+    vertical-align: top;
+}
+
+.program-table tbody tr:nth-of-type(even) {
+    background-color: #1a1a1a;
+}
+
+.deskripsi-col {
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.btn-ikut-table {
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.btn-ikut-table:hover {
+    text-decoration: underline;
+}
+
+.judul-col { width: 25%; font-weight: bold; }
+.aksi-col { width: 15%; text-align: center; }
+
+/* Container Utama untuk membungkus Gambar & Kartu */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Mengatur Gambar Karakter */
+.image-area img {
+    max-height: 550px;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+
+/* Grid Kartu Latihan di Samping */
+.stats-side-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 280px;
+}
+
+/* Desain Kartu (Sesuaikan dengan tema gelapmu) */
+.card-workout {
+    background: #1e1e2f;
+    border: 1px solid #303050;
+    border-radius: 12px;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.card-workout:hover {
+    transform: translateX(10px);
+    border-color: #8a2be2;
+}
+
+.card-workout h4 {
+    color: #b0b0b0;
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-workout p {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+}
+
+.card-workout p span {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+}
+
+/* Garis warna berbeda untuk tiap jenis latihan */
+.pushup { border-left: 5px solid #8a2be2; }
+.situp { border-left: 5px solid #00d4ff; }
+.pullup { border-left: 5px solid #00ff88; }
+.squat { border-left: 5px solid #ffcc00; }
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+}
