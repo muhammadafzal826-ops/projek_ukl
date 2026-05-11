@@ -24,6 +24,7 @@ $total_squat  = hitungTotal($conn, $id_user, 'squat');
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
