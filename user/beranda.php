@@ -8,11 +8,15 @@ $u = mysqli_fetch_assoc($query);
 
 <?php
 $id_user = $_SESSION['user_id'];
-echo "ID Kamu: " . $id_user;
 
 function hitungTotal($conn, $id_user, $jenis) {
     $sql = "SELECT SUM(jumlah) as total FROM latihan WHERE id_user = '$id_user' AND jenis_latihan = '$jenis'";
     $res = mysqli_query($conn, $sql);
+    
+    if (!$res) {
+        die("Query Error: " . mysqli_error($conn));
+    }
+    
     $data = mysqli_fetch_assoc($res);
     return $data['total'] ?? 0;
 }
